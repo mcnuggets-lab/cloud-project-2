@@ -24,5 +24,8 @@ def predict():
         "context": escape(request.form.get("context")) or "I'm Kit-Ho Mak. I come from Hong Kong.",
         "question": escape(request.form.get("question")) or "What is my name?",
     })
-    
     return jsonify(prediction)
+
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=8080, debug=True)
