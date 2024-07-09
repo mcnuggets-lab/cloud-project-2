@@ -1,17 +1,17 @@
-service: serverless-flask-container
+service: cloud-project2
 
 provider:
   name: aws
   region: us-west-2
   ecr:
     images:
-      cloud-project-2:
+      cloud-project2:
         path: ./
 
 functions:
   app:
     image:
-      name: cloud-project-2
+      name: cloud-project2
     timeout: 30
     events:
       - http: ANY /
