@@ -1,3 +1,4 @@
+import serverless_wsgi
 from flask import Flask, jsonify, request
 from flask import render_template
 from markupsafe import escape
@@ -25,6 +26,10 @@ def predict():
         "question": escape(request.form.get("question")) or "What is my name?",
     })
     return jsonify(prediction)
+
+
+def handler(event, context):
+    return serverless_wsgi.handle_request(app, event, context)
 
 
 if __name__ == "__main__":

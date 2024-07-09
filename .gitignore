@@ -1,4 +1,5 @@
 .vscode
+.serverless
 
 # python cache / compiled files
 __pycache__/
