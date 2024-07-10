@@ -2,7 +2,7 @@
 
 AWS Lambda deployment of a simple flask webapp of a small Q&A model.
 
-![cloud-project2-architecture drawio](https://github.com/mcnuggets-lab/cloud-project2/assets/16054484/8504ebbd-681b-4ce9-9901-7a2cdb5e7eeb)
+![image](https://github.com/mcnuggets-lab/cloud-project2/assets/16054484/e30696f5-dc28-46a3-84b8-f9d8af15b017)
 
 The model we used is a 24MB model called BERT-Tiny, fine-tuned for Q&A purpose.
 
