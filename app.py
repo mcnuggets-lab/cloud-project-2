@@ -22,8 +22,8 @@ def index_page():
 def predict():
     """Predict from input of the form."""
     prediction = qa_pipeline({
-        "context": escape(request.form.get("context")) or "I'm Kit-Ho Mak. I come from Hong Kong.",
-        "question": escape(request.form.get("question")) or "What is my name?",
+        "context": request.form.get("context", "") or "I'm Kit-Ho Mak. I come from Hong Kong.",
+        "question": request.form.get("question", "") or "What is my name?",
     })
     return jsonify(prediction)
 
